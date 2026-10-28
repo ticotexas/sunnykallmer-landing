@@ -43,7 +43,7 @@
         }
 
         header {
-            padding: 22px 6%;
+            padding: 22px max(20px, calc((100% - 1040px) / 2));
             border-bottom: 1px solid var(--line);
         }
 
@@ -108,8 +108,8 @@
             position: absolute;
             top: 50%;
             left: 6%;
-            width: 43%;
-            max-width: 450px;
+            width: 50%;
+            max-width: 520px;
             transform: translateY(-50%);
         }
 
@@ -133,8 +133,9 @@
 
         h1 {
             margin: 0 0 20px;
-            font-size: clamp(2.2rem, 4.2vw, 3.65rem);
+            font-size: clamp(2rem, 3.3vw, 2.7rem);
             line-height: 1.12;
+            color: #526B78;
         }
 
         .intro {
@@ -232,7 +233,7 @@
 
         @media (max-width: 650px) {
             header {
-                padding: 20px 24px;
+                padding: 20px 14px;
             }
 
             main {
