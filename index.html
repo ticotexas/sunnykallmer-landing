@@ -10,6 +10,9 @@
         content="Professional background and information about Sunny Kallmer, PA-C, and her work in functional and integrative medicine.">
     <meta name="theme-color" content="#FFF8F0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --ivory: #FFF8F0;
@@ -143,6 +146,137 @@
             font-family: Georgia, "Times New Roman", serif;
             font-size: clamp(1rem, 1.6vw, 1.15rem);
             line-height: 1.7;
+        }
+
+
+        /* Personal announcement */
+        .announcement {
+            margin-top: 38px;
+            padding: 36px 44px;
+            border-left: 4px solid var(--blue-gray);
+            border-radius: 8px;
+            background: linear-gradient(135deg, #F8E5DD, #FFF4E9);
+        }
+
+        .announcement h2 {
+            margin: 0 0 20px;
+            color: #526B78;
+            font-family: "Segoe Script", "Brush Script MT", cursive;
+            font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+            line-height: 1.4;
+        }
+
+        .announcement-copy {
+            max-width: 760px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.08rem;
+            line-height: 1.85;
+        }
+
+        .announcement-copy p {
+            margin: 0 0 16px;
+        }
+
+        .sunny-signature {
+            display: block;
+            width: 240px;
+            max-width: 75%;
+            height: auto;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 650px) {
+            .announcement {
+                margin-top: 28px;
+                padding: 28px 24px;
+            }
+
+            .announcement-copy {
+                font-size: 1rem;
+            }
+
+            .sunny-signature {
+                width: 200px;
+            }
+        }
+
+
+        /* Post-it trial */
+        .announcement {
+            position: relative;
+            z-index: 2;
+            width: min(88%, 490px);
+            margin: -58px 0 58px 28px;
+            padding: 35px 38px 30px;
+            border: none;
+            border-radius: 2px;
+            background: #FFF0AF;
+            box-shadow:
+                3px 5px 5px rgba(71, 53, 45, 0.08),
+                9px 15px 25px rgba(71, 53, 45, 0.18);
+            transform: rotate(-3deg);
+            transform-origin: center;
+        }
+
+        .announcement::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 14px;
+            background: rgba(255, 255, 255, 0.22);
+            pointer-events: none;
+        }
+
+        .announcement .eyebrow {
+            color: #766340;
+            font-size: 0.68rem;
+            letter-spacing: 0.12em;
+        }
+
+        .announcement h2 {
+            margin-bottom: 18px;
+            color: #526B78;
+            font-family: "Dancing Script", cursive;
+            font-size: clamp(1.7rem, 3vw, 2.25rem);
+            font-weight: normal;
+            line-height: 1.25;
+        }
+
+        .announcement-copy {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        .announcement-copy p {
+            margin-bottom: 13px;
+        }
+
+        .sunny-signature {
+            width: 205px;
+            max-width: 80%;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 650px) {
+            .announcement {
+                width: calc(100% - 28px);
+                margin: -20px auto 42px;
+                padding: 28px 25px;
+                transform: rotate(-1.5deg);
+            }
+
+            .announcement h2 {
+                font-size: 1.8rem;
+            }
+
+            .announcement-copy {
+                font-size: 0.95rem;
+            }
+
+            .sunny-signature {
+                width: 185px;
+            }
         }
 
         /* About Sunny */
@@ -333,9 +467,44 @@
                 <p class="intro">
                     Sunny Kallmer, PA-C, is a board-certified physician assistant
                     with more than 30 years of clinical experience, including
-                    work in family medicine and a focus on functional and
-                    integrative medicine.
+                    family medicine, and a focus on functional and integrative
+                    medicine with an emphasis on women's health.
                 </p>
+            </div>
+        </section>
+
+
+        <section class="announcement" aria-labelledby="announcement-title">
+            <p class="eyebrow">A personal update from Sunny</p>
+
+            <h2 id="announcement-title">
+                A new chapter is beginning…
+            </h2>
+
+            <div class="announcement-copy">
+                <p>
+                    After many rewarding years, I have made the decision
+                    to step away from my current practice.
+                </p>
+
+                <p>
+                    I am deeply grateful for the relationships I have built
+                    with my patients and for the trust you have placed in me.
+                </p>
+
+                <p>
+                    I will share more about my next professional chapter,
+                    including where you can find me, as soon as those
+                    details are finalized. Please check back for updates.
+                </p>
+
+                <p>With gratitude,</p>
+
+                <img class="sunny-signature"
+                     src="images/sunny-signature.png"
+                     alt="Sunny"
+                     width="1927"
+                     height="816">
             </div>
         </section>
 
@@ -347,62 +516,53 @@
             </h2>
 
             <p class="about-copy">
-                Sunny's professional background spans comprehensive patient
-                care, patient education, allergy care, and the evaluation
-                and management of acute, chronic, and complex conditions.
+                Sunny brings more than 30 years of clinical experience to
+                her work, including family medicine, women's health, allergy
+                care, and the evaluation and management of acute, chronic,
+                and complex conditions.
             </p>
 
             <p class="about-copy">
-                Her work in functional and integrative medicine includes
-                considering individual health concerns and developing
-                personalized approaches to care.
+                Her approach combines that broad clinical background with
+                functional and integrative medicine, recognizing that every
+                patient brings unique health concerns, experiences, and goals.
+                She values understanding the whole person, not simply
+                addressing individual symptoms.
             </p>
 
             <div class="highlights">
                 <article class="highlight">
                     <h3>Clinical experience</h3>
                     <p>
-                        More than three decades of experience in clinical practice,
-                        including family medicine.
+                        More than 30 years of clinical experience, including
+                        family medicine and comprehensive patient care.
                     </p>
                 </article>
 
                 <article class="highlight">
-                    <h3>Functional medicine</h3>
+                    <h3>Functional &amp; Integrative Medicine</h3>
                     <p>
-                        Six years focused on functional and integrative medicine.
+                        Six years focused on functional and integrative medicine,
+                        with a particular emphasis on women's health and a
+                        whole-person approach to wellness.
                     </p>
                 </article>
 
                 <article class="highlight">
-                    <h3>Patient education</h3>
+                    <h3>Personalized Care</h3>
                     <p>
-                        Experience in patient education, wellness, and
-                        individualized care.
+                        Sunny believes in empowering patients through a deeper
+                        understanding of their health, helping them make
+                        informed decisions and take an active role in
+                        achieving their individual health and wellness goals.
                     </p>
                 </article>
             </div>
         </section>
-
-        <section class="profile-note" aria-labelledby="approach-title">
-            <p class="eyebrow">Professional approach</p>
-
-            <h2 id="approach-title">
-                Care centered on the individual.
-            </h2>
-
-            <p>
-                Sunny's clinical experience includes working with patients
-                across the lifespan and addressing a range of health concerns.
-                Her professional interests include functional and integrative
-                approaches to understanding health.
-            </p>
-        </section>
     </main>
 
     <footer>
-        <p>Sunny Kallmer, PA-C</p>
-        <p>Professional background and information.</p>
+        <p>&copy; 2026 Sunny Kallmer, PA-C</p>
     </footer>
 </body>
 
